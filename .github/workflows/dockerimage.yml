@@ -14,14 +14,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Docker Hub Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: wuben007/wukong-robot
         username: ${{ secrets.DOCKER_GITHUB_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         dockerfile: docker/Dockerfile
     - name: Publish to Github Package Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: docker.pkg.github.com/wuben007/wukong-robot/wukong
         username: ${{ secrets.DOCKER_GITHUB_USERNAME }}
